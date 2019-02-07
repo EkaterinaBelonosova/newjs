@@ -17,7 +17,6 @@ let appData = {
     income:[],
     savings:false
 };
-    
    
     for(let i=0; i<2; i++) {
         let vopr1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
@@ -28,10 +27,10 @@ let appData = {
             console.log("done");
             appData.expenses[vopr1]=vopr2; //тоже самое appData.expenses.vopr1=vopr2; 
         }else{
-
+        i--;
         }
     };
-    
+
     console.log(appData);
 
     appData.moneyDay = appData.cost/30;
