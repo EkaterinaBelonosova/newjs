@@ -4,6 +4,7 @@
 
 //alert("hello");
 
+
 let money = +prompt("Ваш бюджет на месяц?", "25");
     console.log(money);
 let time = prompt("Введите дату в формате YYYY-MM-DD", "YYYY-MM-DD");
