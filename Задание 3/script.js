@@ -88,12 +88,25 @@ let appData = {
     },
     chooseIncome: function(){
         let items = prompt("Что принесет дполнительный доход (Перечислите через запятую)","");
+        while(items=="" || items == null){
+            let items = prompt("Что принесет дполнительный доход (Перечислите через запятую)","");
+
+        }
         appData.income=items.split(', '); //split нужен для того, чтобы считывать строку введенную пользователем и записывать значения в разные блоки массива определяя их разделение зяпятой
+        appData.income.push(prompt("Что то еще?"));
+        appData.income.sort();
+        appData.income.forEach(function (item,i){
+            alert(i+1 + ': ' + "Способы доп. заработка: "  + item);
+        });
+        
     }
 };
-   
-console.log(appData);
+ 
+appData.chooseIncome(); // вызов функции из объекта
 
+for(let key in appData){
+    console.log("Наша программа включает в себя данные: "+key+appData[key]);
 
-appData.chooseExpenses(); // вызов функции из объекта
-    
+}
+
+console.log(appData);   
