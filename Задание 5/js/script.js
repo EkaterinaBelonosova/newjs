@@ -26,8 +26,6 @@ let delAdvertising = document.querySelector('.adv'),
     let answerApple = prompt('Какое отношение к технике Apple', '');
         divprompt = document.getElementById('prompt');
         divprompt.textContent = answerApple;
-
-
     /*ответ в промпт"*/ 
 
     console.log(divprompt);
