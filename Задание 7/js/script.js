@@ -231,7 +231,7 @@ window.addEventListener('DOMContentLoaded', function() {    //запускать
                             if(request.readyState<4){
                                resolve();
                             }else if(request.readyState === 4){
-                                if(request.status == 200 && request.status < 3){
+                                if(request.status == 200 && request.status < 300){
                                     resolve();
                                 }
                                 else{
